@@ -19,19 +19,19 @@ public class EsempioDiThread implements Runnable{
         }catch (InterruptedException e){
             System.out.println("Primo thread: Mi hanno interrotto");
         }
-        System.out.println("Terminato: " + Thread.currentThread().toString());
+        System.out.println("Terminato: " + Thread.currentThread());
     }
     
     public void run(){
         try{
             int i;
             for (i = 1; i < 9; i++) {
-                System.out.println("\t\t" + i + " <-- " + Thread.currentThread().toString());
+                System.out.println("\t\t" + i + " <-- " + Thread.currentThread());
                 Thread.sleep(1000);
             }
         }catch (InterruptedException e){
             System.out.println("\t\tThread figlio: Mi hanno interrotto");
         }
-        System.out.println("\t\tThread: " + Thread.currentThread().toString());
+        System.out.println("\t\tThread: " + Thread.currentThread());
     }
 }
